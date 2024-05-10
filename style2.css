@@ -1,0 +1,115 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(253, 253, 253, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(chrome\ hearts.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 100%;
+}
+    
+
+
+.container {
+    text-align: center;
+    background-color: #ffffff44;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+
+input[type="text"] {
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255) ;
+    background-color: rgba(0, 0, 0, 0.116);
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+button {
+    background-color: #0000005e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.5s;
+}
+
+button:hover {
+    background-color: #6b6b6b;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.link{
+    margin-bottom: none;
+    margin-left: 3%;
+    border: 1px solid rgba(2, 2, 2, 0.479);
+    border-radius: 6px;
+    width: fit-content;
+    display: block;
+    padding: 10px 20px;
+    transition: background 0.5s;
+    background-color: #7474743b;
+    cursor: pointer;
+}
+
+.link:hover{
+    background: rgb(133, 133, 133);
+}
+
+.link a{
+    text-decoration: none;
+    color: white;
+}
+
+.link2{
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 45%;
+    z-index: 2;
+    display: block;
+    width: fit-content;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    transition: background 0.5s;
+    background-color: #383838a4;
+    cursor: pointer;
+}
+
+.link2:hover{
+    background: background rgb(253, 253, 253);
+}
+
+.link2 a{
+    text-decoration: none;
+    color: white;
+}

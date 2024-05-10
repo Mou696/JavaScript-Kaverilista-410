@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(chrome\ hearts.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 100%;
+    position: relative; 
+}
+
+.image-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 3, 3, 0.521); 
+    z-index: 1; 
+}
+
+.link {
+    position: absolute;
+    margin-top: 8%;
+    margin-right: 15%;
+    z-index: 2; 
+    display: block;
+    width: fit-content;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: white;
+    transition: background 0.5s;
+    background-color: #383838a4;
+    cursor: pointer;
+}
+
+.link:hover{
+    background:rgb(138, 138, 138);
+}
+
+.link a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.link2{
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 15%;
+    z-index: 2;
+    display: block;
+    width: fit-content;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    transition: background 0.5s;
+    background-color: #383838a4;
+    cursor: pointer;
+}
+
+.link2:hover{
+    background: background rgb(253, 253, 253);
+}
+
+.link2 a{
+    text-decoration: none;
+    color: white;
+}

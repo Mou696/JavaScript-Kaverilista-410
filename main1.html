@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaverit</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kaverit</h1>
+        <button onclick="lisaaKaverit()">Lisää kaverit</button>
+        <div id="kaveriLista"></div>
+    </div>
+
+    <div class="link">
+        <a href="main2.0.html">Versio 2.0</a>
+    </div>
+    
+    <div class="link2">
+        <a href="main3.html">Takaisin etu sivulle</a>
+    </div>
+
+<script>
+    
+    var kaverit = [];
+
+    function lisaaKaverit() {
+        for (var i = 0; i < 10; i++) {
+            var kaverinNimi = prompt("Anna kaverin nimi:");
+            kaverit.push(kaverinNimi);
+        }
+        tulostaKaverit();
+    }
+
+    function tulostaKaverit() {
+        var lista = document.getElementById("kaveriLista");
+        lista.innerHTML = "<h2>Kaverit:</h2><ul>";
+        kaverit.forEach(function(kaveri) {
+            lista.innerHTML += "<li>" + kaveri + "</li>";
+        });
+        lista.innerHTML += "</ul>";
+    }
+</script>
+
+</body>
+</html>
