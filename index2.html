@@ -3,22 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etu sivu</title>
-    <link rel="stylesheet" href="style3.css">
+    <title>Kaverit 2.0</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
-
-    <div class="link">
-        <a href="index.html">Versio1</a>
-    </div>
-    
-    <div class="link2">
-        <a href="index1.html">Versio2</a>
-    </div>
-
-    <div class="image">
-        <div class="image-overlay"></div>
-    </div>
 <body>
-    
+    <div class="container">
+        <h1>Kaverit 2.0</h1>
+        <input type="text" id="kaveriInput" placeholder="Lisää Kaveri">
+        <button onclick="lisaaKaveri()">Lisää kaveri</button>
+        <input type="text" id="poistoInput" placeholder="Poistettavan kaverin nimi">
+        <button onclick="poistaKaveri()">Poista</button>
+        <button onclick="jarjestaKaverit()">Järjestä kaverit</button>
+        <ul id="kaveriLista"></ul>
+    </div>
+    <div class="link">
+        <a href="index1.html">Versio 1</a>
+    </div>
+
+    <div class="link2">
+        <a href="index.html">Takaisin etu sivulle</a>
+    </div>
+
+    <script>
+        var kaverit = [];
+
+        function lisaaKaveri() {
+            var kaveriInput = document.getElementById("kaveriInput");
+            var kaverinNimi = kaveriInput.value;
+            if (kaverinNimi.trim() !== "") {
+                kaverit.push(kaverinNimi);
+                kaveriInput.value = "";
+                paivitaLista();
+            }
+        }
+
+        function poistaKaveri() {
+            var poistoInput = document.getElementById("poistoInput");
+            var poistettavaNimi = poistoInput.value;
+            var indeksi = kaverit.indexOf(poistettavaNimi);
+            if (indeksi !== -1) {
+                kaverit.splice(indeksi, 1);
+                paivitaLista();
+            }
+        }
+
+
+
+        function jarjestaKaverit() {
+            kaverit.sort();
+            paivitaLista();
+        }
+
+        function paivitaLista() {
+            var lista = document.getElementById("kaveriLista");
+            lista.innerHTML = "";
+            kaverit.forEach(function(kaveri) {
+                var listItem = document.createElement("li");
+                listItem.textContent = kaveri;
+                lista.appendChild(listItem);
+            });
+        }
+    </script>
 </body>
 </html>
